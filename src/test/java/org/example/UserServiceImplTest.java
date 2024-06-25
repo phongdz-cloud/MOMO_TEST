@@ -3,7 +3,6 @@ package org.example;
 import org.example.dto.User;
 import org.example.service.IUserService;
 import org.example.service.impl.UserServiceImpl;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.NoSuchElementException;
@@ -11,7 +10,7 @@ import java.util.NoSuchElementException;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class UserServiceTest {
+public class UserServiceImplTest {
 
     private final IUserService iUserService = UserServiceImpl.getInstance();
 
