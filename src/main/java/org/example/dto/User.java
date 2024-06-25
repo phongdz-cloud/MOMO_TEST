@@ -1,29 +1,21 @@
 package org.example.dto;
 
-public class User {
+public class User extends IdBase {
+    private final String username;
 
-    private String username;
+    private final Account account;
 
-    private long balance;
-
-    public User(String username, long balance) {
+    public User(int id, String username, String accountNumber, long balance) {
+        super(id);
         this.username = username;
-        this.balance = balance;
+        this.account = new Account(this.getId(), accountNumber, balance);
     }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public long getBalance() {
-        return balance;
-    }
-
-    public void setBalance(long balance) {
-        this.balance = balance;
+    public Account getAccount() {
+        return account;
     }
 }
